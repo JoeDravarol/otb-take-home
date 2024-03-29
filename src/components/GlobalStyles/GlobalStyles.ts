@@ -37,6 +37,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* DESIGN TOKENS */
 html {
   --color-white: ${COLORS.white};
+  --color-off-white: ${COLORS.offWhite};
   --color-black: ${COLORS.black};
   --color-gray-400: ${COLORS.gray[400]};
   --color-gray-500: ${COLORS.gray[500]};

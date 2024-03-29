@@ -1,5 +1,6 @@
 export const COLORS = {
   white: '0 0 100%',
+  offWhite: '200 37.5% 96.9%',
   black: '0 0 20%',
   gray: {
     400: '0 0 83.1%',
@@ -27,8 +28,10 @@ export const WEIGHTS = {
 
 export const BREAKPOINTS = {
   tableMin: 820,
+  laptopMin: 1200,
 };
 
 export const QUERIES = {
   tableAndUp: `(min-width: ${BREAKPOINTS.tableMin / 16}rem)`,
+  laptopAndUp: `(min-width: ${BREAKPOINTS.laptopMin / 16}rem)`,
 };

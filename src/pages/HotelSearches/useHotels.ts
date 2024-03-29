@@ -1,54 +1,37 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import backgroundImage from '../assets/images/background.png';
-import hotelImage1 from '../assets/images/hotel-image-1.png';
-import hotelImage2 from '../assets/images/hotel-image-2.png';
-import hotelImage3 from '../assets/images/hotel-image-3.png';
+import hotelImage1 from '../../assets/images/hotel-image-1.png';
+import hotelImage2 from '../../assets/images/hotel-image-2.png';
+import hotelImage3 from '../../assets/images/hotel-image-3.png';
+import { FilterEnum } from '../../components/FilterGroup';
 
-import HotelResult from '../components/HotelResult';
-import { QUERIES } from '../constant/design-token';
-
-const HotelSearches = () => {
-  const [hotels, setHotels] = React.useState(data);
-
-  return (
-    <Wrapper>
-      <HotelResults>
-        {hotels.map((hotel) => (
-          <HotelResult
-            key={hotel.id}
-            title={hotel.title}
-            destination={hotel.destination}
-            image={hotel.image}
-            description={hotel.description}
-            price={hotel.price}
-            ratings={hotel.ratings}
-            guests={hotel.guests}
-            arrivalDate={hotel.arrivalDate}
-            lengthOfStay={hotel.lengthOfStay}
-            departingLocation={hotel.departingLocation}
-          />
-        ))}
-      </HotelResults>
-    </Wrapper>
+const useHotels = () => {
+  const [hotels, setHotels] = React.useState(() =>
+    data.sort((a, b) => (a.title < b.title ? -1 : 1))
   );
+
+  const sortHotelBy = (condition: FilterEnum) => {
+    switch (condition) {
+      case FilterEnum.alphabetically:
+        setHotels((hotels) =>
+          hotels.sort((a, b) => (a.title < b.title ? -1 : 1))
+        );
+        break;
+      case FilterEnum.price:
+        // Lowest price first
+        setHotels((hotels) => hotels.sort((a, b) => a.price - b.price));
+        break;
+      case FilterEnum.rating:
+        // Highest rating first
+        setHotels((hotels) => hotels.sort((a, b) => b.ratings - a.ratings));
+        break;
+    }
+  };
+
+  return { hotels, sortHotelBy };
 };
 
-export default HotelSearches;
-
-const Wrapper = styled.div`
-  background-image: url(${backgroundImage});
-  min-height: 100svh; // Fill bgImage full screen height
-  padding: clamp(1rem, calc(2.5vw + 0.5rem), 10rem); // Scale with screen width
-`;
-
-const HotelResults = styled.div`
-  @media ${QUERIES.tableAndUp} {
-    width: 800px;
-    max-width: 800px;
-  }
-`;
+export default useHotels;
 
 type HotelResult = {
   id: string;
