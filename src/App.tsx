@@ -1,7 +1,9 @@
+import HotelSearches from './pages/HotelSearches';
+
 function App() {
   return (
     <>
-      <h1>On The Beach</h1>
+      <HotelSearches />
     </>
   );
 }

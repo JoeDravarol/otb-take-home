@@ -40,7 +40,8 @@ html {
   --color-black: ${COLORS.black};
   --color-gray-400: ${COLORS.gray[400]};
   --color-gray-500: ${COLORS.gray[500]};
-  --color-primary: ${COLORS.primary};
+  --color-primary-light: ${COLORS.primary.light};
+  --color-primary: ${COLORS.primary.main};
   --color-accent-light: ${COLORS.accent.light};
 
   --font-family-sans-serif: ${FAMILES.sansSerif};
@@ -51,10 +52,8 @@ html {
 }
 
 /* GLOBAL STYLES */
-*,
-*:before,
-*:after {
-  line-height: 1.5;
+html, body {
+  line-height: 1.4;
   font-family: var(--font-family-sans-serif);
 }
 `;
