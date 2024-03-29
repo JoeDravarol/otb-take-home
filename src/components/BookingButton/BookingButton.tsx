@@ -42,7 +42,7 @@ const Price = styled.span`
   font-size: 1.25rem;
   letter-spacing: 1px;
 
-  @media ${QUERIES.tableAndUp} {
+  @media ${QUERIES.tabletAndUp} {
     font-size: 1.7rem;
   }
 `;

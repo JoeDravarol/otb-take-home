@@ -22,7 +22,7 @@ const ExpandableContainer = ({
     if (wrapperRef.current) {
       setWrapperHeight(wrapperRef.current.clientHeight);
     }
-  });
+  }, [wrapperHeight]);
 
   return (
     <Wrapper

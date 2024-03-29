@@ -35,8 +35,8 @@ const HotelResult = ({
 }: HotelResultProps) => {
   const { width } = useWindowSize();
 
-  const IS_MOBILE_AND_UP = width < BREAKPOINTS.tableMin;
-  const IS_TABLET_AND_UP = width >= BREAKPOINTS.tableMin;
+  const IS_MOBILE_AND_UP = width < BREAKPOINTS.tabletMin;
+  const IS_TABLET_AND_UP = width >= BREAKPOINTS.tabletMin;
   const [numOfAdults, numOfChildren, numOfInfants] = guests;
 
   return (
@@ -93,7 +93,7 @@ const Wrapper = styled.section`
 const Container = styled.section`
   display: grid;
 
-  @media ${QUERIES.tableAndUp} {
+  @media ${QUERIES.tabletAndUp} {
     grid-template-columns: 1fr 306px; // 800px - hotelImageWidth = 306px
   }
 `;
@@ -101,7 +101,7 @@ const Container = styled.section`
 const Img = styled.img`
   width: 100%;
 
-  @media ${QUERIES.tableAndUp} {
+  @media ${QUERIES.tabletAndUp} {
     width: initial;
   }
 `;
@@ -121,7 +121,7 @@ const Location = styled.p`
 const DealDetails = styled.div`
   padding: 1.25rem;
 
-  @media ${QUERIES.tableAndUp} {
+  @media ${QUERIES.tabletAndUp} {
     padding-bottom: initial;
   }
 `;

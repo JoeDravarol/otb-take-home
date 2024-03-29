@@ -10,7 +10,7 @@ type RatingsProps = {
 };
 
 const Ratings = ({ ratings, tag: Tag = 'div', ...props }: RatingsProps) => {
-  const allStars = Array.from({ length: ratings }).map((el, i) => (
+  const allStars = Array.from({ length: ratings }).map((_el, i) => (
     <Star key={i} />
   ));
 

@@ -27,11 +27,11 @@ export const WEIGHTS = {
 };
 
 export const BREAKPOINTS = {
-  tableMin: 820,
+  tabletMin: 820,
   laptopMin: 1200,
 };
 
 export const QUERIES = {
-  tableAndUp: `(min-width: ${BREAKPOINTS.tableMin / 16}rem)`,
+  tabletAndUp: `(min-width: ${BREAKPOINTS.tabletMin / 16}rem)`,
   laptopAndUp: `(min-width: ${BREAKPOINTS.laptopMin / 16}rem)`,
 };

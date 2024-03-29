@@ -87,7 +87,7 @@ const GridContainer = styled.div`
 `;
 
 const HotelResults = styled.div`
-  @media ${QUERIES.tableAndUp} {
+  @media ${QUERIES.tabletAndUp} {
     width: 800px;
     max-width: 800px;
   }
