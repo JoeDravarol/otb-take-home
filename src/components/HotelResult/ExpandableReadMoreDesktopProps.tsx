@@ -60,7 +60,7 @@ const StyledExpandableContainer = styled(
 
   padding-block: ${(props) => props.$isExpanded && 'var(--block-spacing)'};
   padding-inline: var(--inline-spacing);
-  background: var(--color-white);
+  background: hsl(var(--color-white));
 `;
 
 const ReadMoreButton = styled.button`
@@ -68,12 +68,14 @@ const ReadMoreButton = styled.button`
 
   padding-block: var(--block-spacing);
   padding-inline: var(--inline-spacing);
-  background-color: var(--color-white);
-  color: var(--color-primary);
+  background-color: hsl(var(--color-white));
+  color: hsl(var(--color-primary));
   cursor: pointer;
 
   position: absolute;
-  top: calc((var(--block-spacing) + 1.85rem) * -1); // Prevent overflow outside image
+  top: calc(
+    (var(--block-spacing) + 1.85rem) * -1
+  ); // Prevent overflow outside image
   left: 0;
 
   & svg {
@@ -89,7 +91,7 @@ const ReadMoreButton = styled.button`
 `;
 
 const DetailOverview = styled.h3`
-  color: var(--color-primary);
+  color: hsl(var(--color-primary));
 `;
 
 const Bold = styled.span`

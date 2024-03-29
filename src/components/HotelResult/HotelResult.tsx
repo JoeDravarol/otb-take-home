@@ -82,7 +82,7 @@ const HotelResult = ({
 export default HotelResult;
 
 const Wrapper = styled.section`
-  background-color: var(--color-white);
+  background-color: hsl(var(--color-white));
   margin-bottom: 2rem;
 
   &:last-of-type {
@@ -109,11 +109,11 @@ const Img = styled.img`
 const Title = styled.h2`
   font-size: 1.25rem;
   max-width: fit-content;
-  color: var(--color-primary);
+  color: hsl(var(--color-primary));
 `;
 
 const Location = styled.p`
-  color: var(--color-gray-500);
+  color: hsl(var(--color-gray-500));
   letter-spacing: 1px;
   font-size: 0.9rem;
 `;

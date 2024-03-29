@@ -64,8 +64,8 @@ const ReadMoreButton = styled.button`
   width: 100%;
   padding-block: var(--block-spacing);
   margin-bottom: var(--bottom-spacing);
-  background-color: var(--color-primary-light);
-  color: var(--color-primary);
+  background-color: hsl(var(--color-primary-light));
+  color: hsl(var(--color-primary));
   cursor: pointer;
 
   & svg {
@@ -81,7 +81,7 @@ const ReadMoreButton = styled.button`
 `;
 
 const DetailOverview = styled.h3`
-  color: var(--color-primary);
+  color: hsl(var(--color-primary));
 `;
 
 const Bold = styled.span`

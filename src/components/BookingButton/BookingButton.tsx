@@ -26,8 +26,8 @@ const Button = styled.button`
   border-radius: 5px;
   width: 100%;
   font-weight: var(--font-weight-bold);
-  background-color: var(--color-accent-light);
-  color: var(--color-primary);
+  background-color: hsl(var(--color-accent-light));
+  color: hsl(var(--color-primary));
   cursor: pointer;
 
   // Remove default styles

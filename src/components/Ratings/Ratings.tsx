@@ -25,8 +25,8 @@ const Ratings = ({ ratings, tag: Tag = 'div', ...props }: RatingsProps) => {
 export default Ratings;
 
 const Star = styled(StarIcon)`
-  color: var(--color-accent-light);
-  fill: var(--color-accent-light);
+  color: hsl(var(--color-accent-light));
+  fill: hsl(var(--color-accent-light));
   width: 20px;
   height: 20px;
   display: inline-block;

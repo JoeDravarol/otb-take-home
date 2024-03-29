@@ -1,16 +1,16 @@
 export const COLORS = {
-  white: '#FFF',
-  black: '#333',
+  white: '0 0 100%',
+  black: '0 0 20%',
   gray: {
-    400: '#D4D4D4',
-    500: '#868686',
+    400: '0 0 83.1%',
+    500: '0 0 52.5%',
   },
   primary: {
-    light: '#D5EFF9',
-    main: '#17317F', // Blue - Brand color
+    light: '196.7 75% 90.6%',
+    main: '225 69.3% 29.4%', // Blue - Brand color
   },
   accent: {
-    light: '#FEDC07', // Yellow
+    light: '51.7 99.2% 51.2%', // Yellow
   },
 };
 
