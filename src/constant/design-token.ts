@@ -34,4 +34,5 @@ export const BREAKPOINTS = {
 export const QUERIES = {
   tabletAndUp: `(min-width: ${BREAKPOINTS.tabletMin / 16}rem)`,
   laptopAndUp: `(min-width: ${BREAKPOINTS.laptopMin / 16}rem)`,
+  noReduceMotionPreference: `(prefers-reduced-motion: no-preference)`,
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { QUERIES } from '../../constant/design-token';
 
 type ExpandableContainerProps = {
   isExpanded: boolean;
@@ -48,5 +49,8 @@ const Wrapper = styled.section<WrapperProps>`
   max-height: ${(props) =>
     props.$isExpanded ? props.$wrapperHeight + 200 : 0}px;
   overflow: hidden;
-  transition: all 0.25s ease;
+
+  @media ${QUERIES.noReduceMotionPreference} {
+    transition: all 0.25s ease;
+  }
 `;
